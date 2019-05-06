@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.todo-list {
+  /* 模拟手机大小 */
+  width: 375px;
+  min-height: 667px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  /* 下面两行代码在移动端可以删除 */
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.header {
+  height: 180px;
+  background: url(./header.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: stretch;
+  background: rgb(221, 217, 221);
+}
+
+.footer .add {
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 5px;
+  width: 50px;
+  background: linear-gradient(to right, #ABDCFF, #0396FF);
+  padding: 10px;
+  position: relative;
+}
+
+.footer .add-line {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 30px;
+  background: #fff;
+}
+
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.footer #add-input {
+  flex: 1;
+  font-size: 22px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+}

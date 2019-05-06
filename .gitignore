@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.idea/
+.cache
+.sass-cache
+tmp/
+bower_components/
+build/
+dest/
+project.config.json
+.vscode/
