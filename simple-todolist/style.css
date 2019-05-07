@@ -5,7 +5,7 @@
 .todo-list {
   /* 模拟手机大小 */
   width: 375px;
-  min-height: 667px;
+  height: 667px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -16,17 +16,19 @@
 }
 
 .header {
-  height: 180px;
+  min-height: 220px;
   background: url(./header.jpg) no-repeat;
   background-size: 100% auto;
+  color: #fff;
 }
 
 .content {
   flex: 1;
+  overflow: scroll;
 }
 
 .footer {
-  height: 50px;
+  min-height: 50px;
   padding: 5px;
   display: flex;
   align-items: stretch;
@@ -61,4 +63,12 @@
   padding: 0 10px;
   outline: none;
   border: none;
+}
+
+/* todo-item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding: 0 5px;
 }
