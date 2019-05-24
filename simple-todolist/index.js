@@ -2,7 +2,7 @@
  * @Author: leo 
  * @Date: 2019-05-06 09:38:28 
  * @Last Modified by: leo
- * @Last Modified time: 2019-05-07 09:36:21
+ * @Last Modified time: 2019-05-07 09:40:39
  */
 
 (function() {
@@ -20,9 +20,9 @@
   /**
    * 核心方法，添加Todo
    */
-  function addTodo(todo) {
+  function addTodo(todo, id) {
     const html = `
-      <div class="todo-item">
+      <div class="todo-item" id="todo${id}">
         <div class="todo-icon"></div>
         <div class="todo-text">
           ${todo}
