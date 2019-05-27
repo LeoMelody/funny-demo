@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+.loading-wrapper
+{
+	position: relative;
+	min-height: 120px;
+	display: block;
+}
+.loading
+{
+	position: absolute;
+	min-height: 100px;
+	top: 50%;
+	left: 50%;
+	right: 0;
+	bottom: 0;
+	// @include translateX(-50%);
+  will-change: transform;
+
+	&:after 
+	{
+		content: '';
+		width: 50px;
+		height: 50px;
+		background: #004476;
+		@include animation(preloader 500ms linear infinite);
+		position: absolute;
+		top: 0;
+		left: 0; 
+		border-radius: 3px;
+	}
+	&:before 
+	{
+		content: '';
+		width: 50px;
+		height: 5px;
+		background: #000;
+		@include animation(preloader-shadow 500ms linear infinite);
+		opacity: 0.1;
+		position: absolute;
+		top: 59px;
+		left: 0;
+		border-radius: 50%;
+	}
+}
+
+@include keyframes(preloader) 
+{
+	17% 
+	{ 
+		border-bottom-right-radius: 3px; 
+	}
+	25% 
+	{ 
+		@include transform(translateY(9px) rotate(22.5deg));
+	}
+	50% 
+	{
+		@include transform(scale(1,.9) translateY(18px) rotate(45deg));
+		border-bottom-right-radius: 40px;
+	}
+	75% 
+	{ 
+		@include transform(translateY(9px) rotate(67.5deg));
+	}
+	100% { 
+		@include transform(translateY(0) rotate(90deg));
+	}
+}
+@include keyframes(preloader-shadow) 
+{
+	50% 
+	{
+		@include transform(scale(1.2,1));
+	}
+}
